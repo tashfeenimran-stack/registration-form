@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="form-container">
+
+        <h1>Registration Form</h1>
+
+        <p class="subtitle">
+            Please fill in your information below
+        </p>
+        <form method="POST" action="/submit">
+
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" name="name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label>Phone</label>
+                <input type="tel" name="phone" placeholder="Enter your phone number" required>
+            </div>
+
+            <div class="form-group">
+                <label>Age</label>
+                <input type="number" name="age" placeholder="Enter your age" min="1" max="100" required>
+            </div>
+
+            <button type="submit">Submit Registration</button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
